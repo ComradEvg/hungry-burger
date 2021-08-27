@@ -4,6 +4,8 @@
    z-index: 50;
    top: 0;
    left: 0;
+   &__inner {
+   }
    // ПЛАШКА=========================
    &::before {
       content: "";
@@ -12,12 +14,8 @@
       left: 0px;
       width: 100%;
       height: 100%;
-      background-color: #2f343a;
-      z-index: 0;
-      @media (max-width: 767px),(max-height: 767px) {
-         height: 50px;
-         z-index: 2;
-      }
+      background-color: transparent;
+      z-index: -1;
    }
    // ====================================
 }
@@ -33,31 +31,6 @@
       height: 3px;
       top: 14px;
    }
-   @media (max-width: 767px),(max-height: 767px) {
-      position: absolute;
-      display: block;
-      width: 30px;
-      height: 30px;
-      z-index: 12;
-      right: 15px;
-      top: 10px;
-      &::before,
-      &::after {
-         content: "";
-         position: absolute;
-         background-color: #c8a35f;
-         width: 100%;
-         height: 3px;
-         left: 0;
-         transition: all 0.3s ease 0s;
-      }
-      &::before {
-         top: 0px;
-      }
-      &::after {
-         bottom: 0px;
-      }
-   }
 }
 .burger.active span {
    transform: scale(0);
@@ -72,3 +45,33 @@
 }
 // ===============================
 
+.menu {
+   font-size: 12px;
+   font-weight: 700;
+   line-height: 18px;
+   text-align: center;
+   &__inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+   }
+
+   &__item {
+
+   }
+
+   &__link {
+   }
+}
+.menu__item + .menu__item{
+   padding-left: 15px;
+}
+.menu-icon {
+   flex: 0 5 150px;
+   &__img{
+      position: relative;
+      width: 100%;
+      top: 50px;
+   }
+}

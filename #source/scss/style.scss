@@ -1,11 +1,25 @@
-@import "nullstyle.scss";
 @font-face {
-   font-family: "Roboto";
-   src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
-   font-weight: 400;
+   font-family: "OpenSans";
+   src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+   font-weight: 700;
    font-style: normal;
    font-display: swap;
 }
+@font-face {
+   font-family: "Banny";
+   src: url("../fonts/Banny-BoldRound.woff2") format("woff2"), url("../fonts/Banny-BoldRound.woff") format("woff");
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face {
+   font-family: "Banny";
+   src: url("../fonts/Banny-Round.woff2") format("woff2"), url("../fonts/Banny-Round.woff") format("woff");
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+}
+@import "nullstyle.scss";
 // ДЛЯ БУРГЕРА
 body.lock {
    @media (max-width: 767px),(max-height: 767px) {
@@ -45,7 +59,6 @@ body.lock {
 .main-screen {
    flex: 1 0 100%;
    position: relative;
-   top: 115px;
    overflow: hidden;
    &__bg {
       position: absolute;
@@ -53,61 +66,19 @@ body.lock {
       height: 100%;
       top: 0;
       left: 0;
+      
    }
 }
-.container-main {
-   margin: 200px auto;
-   padding: 0 15px;
-   max-width: 950px;
-   @media (max-width: 847px),(max-height: 847px) {
-      max-width: 700px;
-   }
-   @media (max-width: 560px),(max-height: 560px) {
-      max-width: 450px;
-      margin: 80px auto
-   }
-   @media (max-width: 400px) {
-      margin-top: 120px;
-   }
+.main__inner{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
-.main {
-   &__inner {
-      border: 1px solid #c8a35f;
-      padding: 45px 15px;
-      @media (max-width: 847px),(max-height: 847px) {
-         padding: 30px 15px;
-      }
-   }
 
-   &__title {
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 75px;
-      letter-spacing: 0.05em;
-      text-align: center;
-      margin-bottom: 45px;
-      text-transform: uppercase;
-      @media (max-width: 847px),(max-height: 847px) {
-         font-size: 44px;
-         line-height: 55px;
-         letter-spacing: 0.03em;
-         margin-bottom: 30px;
-      }
-   }
-
-   &__text {
-      text-align: center;
-      max-width: 777px;
-      margin: 0 auto;
-      padding: 0px 35px;
-      @media (max-width: 847px),(max-height: 847px) {
-         font-size: 15px;
-         line-height: 20px;
-         padding: 0px 15px;
-         max-width: 600px;
-      }
-   }
-}
 
 // =================================
 // ВСЕ ОСТАЛЬНЫЕ СТРАНИЦЫ КРОМЕ ФУЛЛСКРИНА
