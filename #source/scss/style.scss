@@ -20,9 +20,13 @@
    font-display: swap;
 }
 @import "nullstyle.scss";
+body {
+   font-family: "OpenSans";
+   font-weight: 700;
+}
 // ДЛЯ БУРГЕРА
 body.lock {
-   @media (max-width: 767px),(max-height: 767px) {
+   @media (max-width: 767px), (max-height: 767px) {
       overflow: hidden;
    }
 }
@@ -35,7 +39,7 @@ body.lock {
 
 // КОНТЕЙНЕР
 .container {
-   max-width: 1130px;
+   max-width: 1300px;
    padding: 0px 10px;
    margin: 0 auto;
 }
@@ -48,7 +52,6 @@ body.lock {
    top: 0;
    left: 0;
    display: flex;
-   font-size: 0px;
    flex-direction: column;
 }
 // ==================================
@@ -66,20 +69,94 @@ body.lock {
       height: 100%;
       top: 0;
       left: 0;
-      
    }
 }
-.main__inner{
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 1;
-   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+
+.main {
+   &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      max-width: 1300px;
+      padding: 0px 10px;
+      margin: 0 auto;
+   }
+   &__column {
+   }
 }
+.main-center {
+   flex: 0 1 70%;
+   font-size: 12px;
+   &__inner {
+   }
 
+   &__over-title {
+      line-height: 14px;
+      letter-spacing: 0.5em;
+      text-align: center;
+   }
 
+   &__title {
+      font-family: "Banny";
+      font-size: 96px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+   }
+
+   &__btn-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 31px;
+   }
+
+   &__btn-item {
+      padding: 0 20px;
+   }
+
+   &__btn-link {
+      display: block;
+      text-align: center;
+      padding: 26px 62px;
+      background-color: #E8C300;
+      border-radius: 5px;
+   }
+}
+.social-media {
+   flex: 0 1 15%;
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+   }
+
+   &__item {
+      margin-top: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      position: relative;
+      opacity: 0.5;
+      img {
+         display: block;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+}
+.social-media__item:first-child {
+   margin-top: 0;
+}
 // =================================
 // ВСЕ ОСТАЛЬНЫЕ СТРАНИЦЫ КРОМЕ ФУЛЛСКРИНА
 // НЕ ЗАБУДЬ ЧТО ШРИФТ ПО УМОЛЧАНИЮ 0 В PAGE

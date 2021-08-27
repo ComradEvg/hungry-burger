@@ -50,28 +50,31 @@
    font-weight: 700;
    line-height: 18px;
    text-align: center;
+   display: flex;
+   justify-content: space-around;
+   height: 100px;
    &__inner {
       display: flex;
+      flex: 1 1 40%;
       justify-content: space-around;
-      align-items: center;
-      height: 100px;
+     align-items: center;
    }
 
    &__item {
-
    }
 
    &__link {
    }
 }
-.menu__item + .menu__item{
-   padding-left: 15px;
+.menu-left{
+  
 }
+
 .menu-icon {
    flex: 0 5 150px;
-   &__img{
+   &__img {
       position: relative;
       width: 100%;
-      top: 50px;
+      top: 25px;
    }
 }
