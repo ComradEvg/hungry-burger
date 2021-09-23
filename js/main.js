@@ -13,7 +13,7 @@ burger.addEventListener('click', function () {
 });
 var mousestart;
 var touches;
-var touchess
+var touchess;
 var mousemove;
 nav.addEventListener('touchstart', function (e) {
    TouchStart(e);
