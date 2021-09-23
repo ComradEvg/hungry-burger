@@ -23,13 +23,41 @@
 // БУРГЕР=============================
 .burger {
    display: none;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   width: 28px;
+   height: 23px;
    & span {
       position: absolute;
-      background-color: #c8a35f;
+      background-color: #e8c300;
       left: 0px;
       width: 100%;
       height: 3px;
-      top: 14px;
+      top: 10px;
+   }
+   &::before,
+   &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #e8c300;
+   }
+   &::before {
+      top: 0;
+   }
+   &::after {
+      bottom: 0;
+   }
+   @media (orientation: portrait) and (max-width: 768px) {
+      display: block;
+      z-index: 40;
+   }
+   @media (orientation: landscape) and (max-height: 768px) {
+      display: block;
+      z-index: 40;
    }
 }
 .burger.active span {
@@ -38,10 +66,12 @@
 .burger.active::before {
    transform: rotate(45deg);
    top: 50%;
+   transition: 0.3s linear;
 }
 .burger.active::after {
    transform: rotate(-45deg);
    top: 50%;
+   transition: 0.3s linear;
 }
 // ===============================
 
@@ -53,11 +83,20 @@
    display: flex;
    justify-content: space-around;
    height: 100px;
+   transition: 0.3s ease;
    &__inner {
       display: flex;
       flex: 1 1 40%;
       justify-content: space-around;
       align-items: center;
+      @media (orientation: portrait) and (max-width: 768px) {
+         flex-direction: column;
+         justify-content: space-around;
+      }
+      @media (orientation: landscape) and (max-height: 768px) {
+         flex-direction: column;
+         justify-content: space-around;
+      }
    }
 
    &__item {
@@ -65,8 +104,37 @@
 
    &__link {
    }
+   @media (orientation: portrait) and (max-width: 768px) {
+      flex-direction: column;
+      position: absolute;
+      padding: 0 10%;
+      right: -100%;
+      top: 0;
+      height: 100vh;
+      backdrop-filter: blur(18px) saturate(200%);
+      -webkit-backdrop-filter: blur(18px) saturate(200%);
+      background-color: rgba(17, 25, 40, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      font-size: 30px;
+      line-height: 35px;
+   }
+   @media (orientation: landscape) and (max-height: 768px) {
+      flex-direction: column;
+      position: absolute;
+      padding: 0 10%;
+      right: -100%;
+      top: 0;
+      backdrop-filter: blur(18px) saturate(200%);
+      -webkit-backdrop-filter: blur(18px) saturate(200%);
+      background-color: rgba(17, 25, 40, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      height: 100vh;
+      font-size: 30px;
+      line-height: 35px;
+   }
 }
 .menu-left {
+   
 }
 
 .menu-icon {
@@ -76,4 +144,13 @@
       width: 100%;
       top: 25px;
    }
+   @media (orientation: portrait) and (max-width: 768px) {
+      display: none;
+   }
+   @media (orientation: landscape) and (max-height: 768px) {
+      display: none;
+   }
+}
+.menu.active{
+   right: 0;
 }

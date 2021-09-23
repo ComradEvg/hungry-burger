@@ -73,7 +73,7 @@ body.lock {
 }
 
 .main {
-   &__filter{
+   &__filter {
       position: absolute;
       @extend %flex-cen;
       top: 0;
@@ -91,6 +91,9 @@ body.lock {
       max-width: 1300px;
       padding: 0px 10px;
       margin: 0 auto;
+      @media (orientation: portrait) and (max-width: 410px) {
+         display: block;
+      }
    }
    &__column {
    }
@@ -108,17 +111,49 @@ body.lock {
       border: 1px solid rgba(255, 255, 255, 0.5);
       @extend %flex-cen;
       &__bg {
-         width: 40px;
-         height: 40px;
+         width: 70%;
+         height: 70%;
          background-color: #fff;
          border-radius: 50%;
          @extend %flex-cen;
+      }
+      @media (orientation: portrait) and (max-width: 600px) {
+         width: 40px;
+         height: 40px;
+      }
+      @media (orientation: landscape) and (max-height: 600px) {
+         width: 40px;
+         height: 40px;
+      }
+      @media (orientation: portrait) and (max-width: 480px) {
+         display: none;
+      }
+      @media (orientation: landscape) and (max-height: 480px) {
+         display: none;
       }
    }
    .arrow-down {
       width: 50%;
       height: 50%;
+      animation-name: arrow-main;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate-reverse;
+      animation-fill-mode: forwards;
    }
+}
+@keyframes arrow-main {
+   0% {
+      transform: translateY(40%);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+.main-null {
+   flex: 0 0 15%;
+   height: 100%;
 }
 .main-center {
    flex: 0 1 70%;
@@ -147,6 +182,18 @@ body.lock {
          height: 5px;
          border-radius: 4px;
          margin: 35px auto 0 auto;
+         @media (orientation: landscape) and (max-height: 400px) {
+            margin: 25px auto 0 auto;
+         }
+      }
+      @media (orientation: portrait) and (max-width: 600px) {
+         font-size: 64px;
+      }
+      @media (orientation: landscape) and (max-height: 600px) {
+         font-size: 64px;
+      }
+      @media (orientation: landscape) and (max-height: 400px) {
+         font-size: 43px;
       }
    }
 
@@ -154,6 +201,14 @@ body.lock {
       display: flex;
       justify-content: center;
       margin-top: 31px;
+      @media (orientation: portrait) and (max-width: 710px) {
+         flex-direction: column;
+         align-items: center;
+      }
+      @media (orientation: landscape) and (max-height: 600px) {
+         flex-direction: column;
+         align-items: center;
+      }
    }
 
    &__btn-item {
@@ -161,8 +216,19 @@ body.lock {
       width: 200px;
       height: 60px;
       border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 5px; 
+      border-radius: 5px;
       background-color: transparent;
+      transition: 0.3s linear;
+      @media (orientation: portrait) and (max-width: 710px) {
+         width: 160px;
+         height: 50px;
+         margin-bottom: 10px;
+      }
+      @media (orientation: landscape) and (max-height: 710px) {
+         width: 160px;
+         height: 50px;
+         margin-bottom: 10px;
+      }
    }
 
    &__btn-link {
@@ -171,17 +237,31 @@ body.lock {
       height: 100%;
       text-align: center;
       line-height: 5;
+      @media (orientation: portrait) and (max-width: 710px) {
+         line-height: 4;
+      }
+      @media (orientation: landscape) and (max-height: 710px) {
+         line-height: 4;
+      }
    }
+   &__btn-item:hover,
    &__btn-item.active {
       background-color: #e8c300;
    }
 }
 .social-media {
-   flex: 0 1 15%;
+   flex: 0 0 15%;
    &__inner {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      @media (orientation: portrait) and (max-width: 410px) {
+         flex-direction: row;
+         justify-content: flex-end;
+         position: absolute;
+         bottom: 20px;
+         right: 20px;
+      }
    }
 
    &__item {
@@ -193,6 +273,7 @@ body.lock {
       border: 1px solid #fff;
       position: relative;
       opacity: 0.5;
+      transition: 0.3s linear;
       img {
          display: block;
          position: absolute;
@@ -200,6 +281,22 @@ body.lock {
          left: 50%;
          transform: translate(-50%, -50%);
       }
+      @media (orientation: portrait) and (max-width: 600px) {
+         width: 40px;
+         height: 40px;
+      }
+      @media (orientation: landscape) and (max-height: 600px) {
+         width: 40px;
+         height: 40px;
+      }
+      @media (orientation: portrait) and (max-width: 410px) {
+         margin-left: 10px;
+      }
+   }
+   &__item:hover,
+   &__item.active {
+      opacity: 1;
+      background-color: #e8c300;
    }
 }
 .social-media__item:first-child {
