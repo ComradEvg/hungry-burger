@@ -8,3 +8,14 @@ function ibgmy() {
    }
 }
 ibgmy()
+
+const menuIcon = document.querySelector('.menu-icon__img')
+
+window.addEventListener('scroll', function () {
+   if(50 < window.pageYOffset){
+      menuIcon.classList.add("deactive")
+   }
+   else{
+      menuIcon.classList.remove("deactive")
+   }
+});

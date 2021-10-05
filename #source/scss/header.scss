@@ -151,6 +151,9 @@
       display: none;
    }
 }
+.menu-icon__img.deactive{
+   visibility: hidden;
+}
 .menu.active{
    right: 0;
 }

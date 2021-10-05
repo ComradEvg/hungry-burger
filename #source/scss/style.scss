@@ -30,6 +30,10 @@ body.lock {
       overflow: hidden;
    }
 }
+::-webkit-scrollbar {
+   width: 0px;
+   background: transparent;
+}
 // =================================
 .wrapper {
    width: 100%;
@@ -306,27 +310,42 @@ body.lock {
 // ВСЕ ОСТАЛЬНЫЕ СТРАНИЦЫ КРОМЕ ФУЛЛСКРИНА
 // НЕ ЗАБУДЬ ЧТО ШРИФТ ПО УМОЛЧАНИЮ 0 В PAGE
 
-// ABOUT US ==================================
-
-.about {
-   color: #000;
+.general {
    padding: 100px 0;
-   // .about__inner
-
+   @media (max-width: 1000px) {
+      padding: 30px 0;
+   }
    &__inner {
       display: flex;
       justify-content: space-between;
       height: 475px;
-   }
-
-   // .about__text
-
-   &__text {
-      width: 50%;
+      @media (max-width: 1110px) {
+         align-items: center;
+         height: auto;
+      }
+      @media (max-width: 600px) {
+         display: block;
+      }
    }
 }
+
+// ABOUT US ==================================
+
+.about {
+   color: #000;
+   // .about__inner
+
+   // .about__text
+}
 .text-inner {
+   width: 50%;
    padding: 114px 0;
+   @media (max-width: 1000px) {
+      padding: 0;
+   }
+   @media (max-width: 600px) {
+      width: 100%;
+   }
 }
 .title {
    font-family: "Banny";
@@ -335,6 +354,7 @@ body.lock {
    font-size: 36px;
    line-height: 48px;
    text-align: center;
+   margin-bottom: 20px;
    &::after {
       content: "";
       background-color: #e8c300;
@@ -343,43 +363,64 @@ body.lock {
       height: 5px;
       border-radius: 4px;
       margin: 27px auto 0 auto;
+      @media (max-width: 767px) {
+         margin: 20px auto 0 auto;
+      }
       @media (orientation: landscape) and (max-height: 400px) {
          margin: 20px auto 0 auto;
       }
    }
+   @media (max-width: 767px) {
+      font-size: 30px;
+      line-height: 38px;
+      margin-bottom: 10px;
+   }
 }
 .subtitle {
-   margin-top: 20px;
-   font-size: 18px;
+   margin-bottom: 29px;
+   font-size: 16px;
    line-height: 28px;
    text-align: center;
+   @media (max-width: 767px) {
+      margin-bottom: 19px;
+      font-size: 14px;
+      line-height: 22px;
+   }
 }
 .description {
-   margin-top: 29px;
    font-size: 14px;
    line-height: 18px;
    text-align: center;
+   @media (max-width: 767px) {
+      margin-bottom: 19px;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: justify;
+   }
 }
-.aboot {
+.about {
    // .aboot__image
 
    &__image {
-      width: 50%;
+      padding-left: 42px;
+      @media (max-width: 1110px) {
+      padding-right: 40px;
+      }
    }
 }
 .image {
-   padding-left: 42px;
-   @media (max-width: 1110px) 
-      {
-         padding-right: 40px;
-      }
+   width: 50%;
+   
+   @media (max-width: 600px) {
+      width: 80%;
+      margin: 0 auto;
+   }
    // .image__photo-inner
 
    &__photo-inner {
       position: relative;
       height: 100%;
-      @media (max-width: 1110px) 
-      {
+      @media (max-width: 1110px) {
          max-width: 475px;
          height: inherit;
       }
@@ -389,8 +430,7 @@ body.lock {
 
    &__photo {
       height: 100%;
-      @media (max-width: 1110px) 
-      {
+      @media (max-width: 1110px) {
          width: 100%;
       }
    }
@@ -405,14 +445,89 @@ body.lock {
       width: 275px;
       height: 275px;
       border: 20px solid #e8c300;
-      @media (max-width: 1110px) 
-      {
-         right: -15%;
+      @media (max-width: 1110px) {
+         right: -10%;
          width: 50%;
          height: 50%;
          border: 10px solid #e8c300;
       }
    }
+}
+
+// CHEF===============================
+
+.chef {
+   position: relative;
+   color: #fff;
+   padding: 100px 0;
+   @media (max-width: 1000px) {
+      padding: 30px 0;
+   }
+   // .chef__inner
+
+   &__inner {
+   }
+
+   // .chef__image
+
+   &__image {
+      padding-right: 42px;
+      @media (max-width: 1110px) {
+      padding-left: 40px;
+   }
+   }
+
+   // .chef__text
+
+   &__text {
+   }
+}
+.chef-screen {
+   // .chef-screen__bg
+
+   &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+   }
+}
+
+.image {
+   // .image__photo-inner
+
+   &__photo-inner {
+   }
+
+   // .image__photo
+
+   &__photo {
+   }
+
+   // .image__decorate
+
+   &__decorate {
+   }
+}
+.image-left {
+   display: block;
+   margin-left: auto;
+}
+.decorate-left {
+   left: 0;
+   @media (max-width: 1110px) {
+      left: -10%;
+   }
+}
+.text-inner {
+}
+.title {
+}
+.subtitle {
+}
+.description {
 }
 
 // FOOTER=============================
