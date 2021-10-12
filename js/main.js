@@ -7,15 +7,19 @@ function ibgmy() {
       ibg.style.backgroundImage = 'url("' + imgsrc + '")';
    }
 }
-ibgmy()
+ibgmy();
 
 const menuIcon = document.querySelector('.menu-icon__img')
 
 window.addEventListener('scroll', function () {
-   if(50 < window.pageYOffset){
+   if (50 < window.pageYOffset) {
       menuIcon.classList.add("deactive")
    }
-   else{
+   else {
       menuIcon.classList.remove("deactive")
    }
 });
+
+
+// Сделать это действие по определенному экрану
+
