@@ -331,11 +331,10 @@ body.lock {
 
 // ABOUT US ==================================
 
-.about {
+.about,
+.reservation {
    color: #000;
    // .about__inner
-
-   // .about__text
 }
 .text-inner {
    width: 50%;
@@ -398,19 +397,20 @@ body.lock {
       text-align: justify;
    }
 }
-.about {
+.about,
+.reservation {
    // .aboot__image
 
    &__image {
       padding-left: 42px;
       @media (max-width: 1110px) {
-      padding-right: 40px;
+         padding-right: 40px;
       }
    }
 }
 .image {
    width: 50%;
-   
+
    @media (max-width: 600px) {
       width: 80%;
       margin: 0 auto;
@@ -473,8 +473,8 @@ body.lock {
    &__image {
       padding-right: 42px;
       @media (max-width: 1110px) {
-      padding-left: 40px;
-   }
+         padding-left: 40px;
+      }
    }
 
    // .chef__text
@@ -494,23 +494,6 @@ body.lock {
       z-index: -1;
    }
 }
-
-.image {
-   // .image__photo-inner
-
-   &__photo-inner {
-   }
-
-   // .image__photo
-
-   &__photo {
-   }
-
-   // .image__decorate
-
-   &__decorate {
-   }
-}
 .image-left {
    display: block;
    margin-left: auto;
@@ -521,15 +504,44 @@ body.lock {
       left: -10%;
    }
 }
-.text-inner {
+
+// RESERVATION===========================
+
+.reservation {
+   &__inner-form {
+   }
 }
 .title {
 }
-.subtitle {
-}
-.description {
-}
+.form {
+   &__inputs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: -5px;
+      
+   }
 
+   &__item {
+      margin: 5px;
+   }
+
+   &__input {
+      background-color: #E5E5E5;
+      padding: 16px 22px;
+   }
+
+   &__button {
+      background-color: #e8c300;
+      width: 100%;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 23px 0;
+      border-radius: 8px;
+      margin-top: 13px;
+   }
+}
 // FOOTER=============================
 @import "footer.scss";
 // =================================

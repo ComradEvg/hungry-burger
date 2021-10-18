@@ -202,15 +202,11 @@ body {
   top: 0;
   left: 0;
 }
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: -1;
+.header.active {
+  background: rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .burger {
@@ -754,7 +750,8 @@ body {
   }
 }
 
-.about {
+.about,
+.reservation {
   color: #000;
 }
 
@@ -837,11 +834,13 @@ body {
   }
 }
 
-.about__image {
+.about__image,
+.reservation__image {
   padding-left: 42px;
 }
 @media (max-width: 1110px) {
-  .about__image {
+  .about__image,
+.reservation__image {
     padding-right: 40px;
   }
 }
@@ -931,4 +930,32 @@ body {
   .decorate-left {
     left: -10%;
   }
+}
+
+.form__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: -5px;
+}
+.form__item {
+  margin: 5px;
+}
+.form__input {
+  background-color: #E5E5E5;
+  padding: 16px 22px;
+}
+.form__button {
+  background-color: #e8c300;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 23px 0;
+  border-radius: 8px;
+  margin-top: 13px;
 }

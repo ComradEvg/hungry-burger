@@ -1,4 +1,4 @@
-const windowInnerWidth = window.innerWidth
+
 const leftImages = document.querySelectorAll('#leftImage');
 for (let elem of leftImages) {
    InstalPeace(elem);
