@@ -318,6 +318,7 @@ body.lock {
    &__inner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       height: 475px;
       @media (max-width: 1110px) {
          align-items: center;
@@ -338,7 +339,6 @@ body.lock {
 }
 .text-inner {
    width: 50%;
-   padding: 114px 0;
    @media (max-width: 1000px) {
       padding: 0;
    }
@@ -482,6 +482,7 @@ body.lock {
    &__text {
    }
 }
+
 .chef-screen {
    // .chef-screen__bg
 
@@ -504,7 +505,14 @@ body.lock {
       left: -10%;
    }
 }
-
+.filter-bg {
+   background: rgba(0, 0, 0, 0.2);
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
 // RESERVATION===========================
 
 .reservation {
@@ -519,7 +527,6 @@ body.lock {
       flex-wrap: wrap;
       justify-content: space-around;
       margin: -5px;
-      
    }
 
    &__item {
@@ -527,8 +534,9 @@ body.lock {
    }
 
    &__input {
-      background-color: #E5E5E5;
+      background-color: #e5e5e5;
       padding: 16px 22px;
+      width: 222px;
    }
 
    &__button {
@@ -542,6 +550,92 @@ body.lock {
       margin-top: 13px;
    }
 }
+
+$height: 46px;
+
+.select {
+   position: relative;
+   z-index: 49;
+   &.open {
+      .select__drop-down {
+         display: block;
+      }
+      .select__backdrop {
+         display: block;
+      }
+   }
+   // .select__input
+
+   &__input {
+      height: $height;
+      background-color: #e5e5e5;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: space-between;
+      width: 222px;
+   }
+
+   &__input span {
+      display: block;
+   }
+
+   // .select__drop-down
+
+   &__drop-down {
+      display: none;
+      background-color: #e5e5e5;
+      position: absolute;
+      top: $height;
+      left: 0;
+      right: 0;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #000;
+   }
+   // .select__list
+
+   &__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+   }
+
+   // .select__item
+   &__backdrop {
+      position: fixed;
+      display: none;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: transparent;
+   }
+
+   &__item {
+      padding: 16px 22px;
+      border-bottom: 1px solid #000;
+
+      &:hover {
+         background-color: #e8c300;
+         cursor: pointer;
+         transition: 0.15s background-color ease-in;
+      }
+      &.selected {
+         background-color: #e8c300;
+      }
+   }
+}
+.select__arow {
+   width: 20px;
+   height: 20px;
+}
+.select__arow.up {
+   transform: rotate(180deg);
+}
+
 // FOOTER=============================
 @import "footer.scss";
 // =================================

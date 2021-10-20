@@ -1,3 +1,4 @@
+
 const windowInnerWidth = window.innerWidth
 
 function ibgmy() {
@@ -39,5 +40,26 @@ let dateMask = new Inputmask({
    showMaskOnHover: false
 });
 dateMask.mask(date);
+
+let time = document.getElementById("formTime");
+let timeMask = new Inputmask({
+   "mask": "99 : 99",
+   "placeholder": "hh : mm",
+   showMaskOnHover: false
+});
+timeMask.mask(time);
+
+const select = new Select('#select', {
+   placeholder: "People",
+   data: [
+      {id: '1', value: "1-2"},
+      {id: '2', value: "3" },
+      {id: '3', value: "4" },
+      {id: '4', value: "5 и более" }
+   ],
+   onSelect(item){
+      
+   }
+})
 // Сделать это действие по определенному экрану
 
