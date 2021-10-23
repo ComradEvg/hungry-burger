@@ -15,7 +15,7 @@ const menuIcon = document.querySelector('.menu-icon__img')
 const headerBG = document.querySelector('.header')
 
 window.addEventListener('scroll', function () {
-   if (50 < window.pageYOffset && window.innerWidth>=767) {
+   if (50 < window.pageYOffset && window.innerWidth >= 767) {
       menuIcon.classList.add("deactive")
       headerBG.classList.add("active")
    }
@@ -52,14 +52,34 @@ timeMask.mask(time);
 const select = new Select('#select', {
    placeholder: "People",
    data: [
-      {id: '1', value: "1-2"},
-      {id: '2', value: "3" },
-      {id: '3', value: "4" },
-      {id: '4', value: "5 и более" }
+      { id: '1', value: "1-2" },
+      { id: '2', value: "3" },
+      { id: '3', value: "4" },
+      { id: '4', value: "5 и более" }
    ],
-   onSelect(item){
-      
+   onSelect(item) {
+
    }
 })
+
+
+const swiper = new Swiper(".swiper", {
+   pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+   },
+})
 // Сделать это действие по определенному экрану
+const productListt = document.querySelector(".product__name-list")
+productListt.addEventListener("click", function (event) {
+   const el = event.target.id
+   const productList = new ProductList(el,{
+   soup: [
+      {value: 'SOUP. . . .', price: 55.68, valueSub: 'INTEGER ULLAMCORPER NEQUE EU PURUSEUISMOD'},
+      { value: 'SOUP Rice. . . .', price: 50, valueSub: 'INTEGER ULLAMCORPER NEQUE' }],
+   pizza: [
+      { value: 'Pineapple pizza. . . .', price: 120, valueSub: 'Chicken, mozzarella, cheddar and parmesan cheese, cheese sauce, tomatoes, alfredo sauce, garlic' }]
+})})
+
+
 

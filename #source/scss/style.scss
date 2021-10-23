@@ -333,7 +333,8 @@ body.lock {
 // ABOUT US ==================================
 
 .about,
-.reservation {
+.reservation,
+.product {
    color: #000;
    // .about__inner
 }
@@ -349,7 +350,6 @@ body.lock {
 .title {
    font-family: "Banny";
    text-transform: uppercase;
-   font-family: Banny;
    font-size: 36px;
    line-height: 48px;
    text-align: center;
@@ -634,6 +634,99 @@ $height: 46px;
 }
 .select__arow.up {
    transform: rotate(180deg);
+}
+
+// SWIPER===============================
+
+@import "swiper.scss";
+
+.swiper-slide {
+   .chef__inner {
+      margin-bottom: 20px;
+   }
+}
+
+// PRODUCT================================
+
+.product {
+   // .product__inner
+
+   &__inner {
+   }
+
+   // .product__name-box
+
+   &__name-box {
+      margin-bottom: 51px;
+   }
+
+   // .product__name-list
+
+   &__name-list {
+      display: flex;
+      justify-content: center;
+   }
+
+   // .product__name-item
+
+   &__name-item {
+      padding: 22px 43px;
+   }
+
+   // .product__price-box
+
+   &__price-box {
+   }
+
+   // .product__price-list
+
+   &__price-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+
+   // .product__price-item
+
+   &__price-item {
+   }
+}
+.product__name-item + .product__name-item {
+   border-left: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.card-product {
+   // .card-product__box
+
+   &__box {
+      font-family: "Banny";
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 18px;
+      width: 363px;
+      height: 66px;
+      display: flex;
+      justify-content: center;
+   }
+
+   // .card-product__name
+
+   &__name {
+      width: 259px;
+   }
+   &__name span {
+      display: block;
+      font-family: "OpenSans";
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+      color: rgba(51, 51, 51, 0.3);
+   }
+
+   // .card-product__price
+
+   &__price {
+   }
 }
 
 // FOOTER=============================
