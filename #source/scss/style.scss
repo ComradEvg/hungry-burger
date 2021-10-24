@@ -728,6 +728,17 @@ $height: 46px;
    &__price {
    }
 }
+.dom{
+   display: flex
+}
+.dom p{
+ display: inline-block;
+}
+.card-product__dotted{
+   flex: 1 0 1%;
+   display: block;
+   border-bottom: 2px dotted #000;
+}
 
 // FOOTER=============================
 @import "footer.scss";

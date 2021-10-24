@@ -1,6 +1,7 @@
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".menu");
-burger.addEventListener('click', function () {
+burger.addEventListener('click', function (event) {
+   if(event.target){
    burger.classList.toggle("active");
    if (burger.classList.contains("active")) {
       nav.classList.add("active");
@@ -8,7 +9,7 @@ burger.addEventListener('click', function () {
    else {
       nav.classList.remove("active");
    }
-});
+}});
 
 document.addEventListener('click', function (e) {
    const target = e.target;

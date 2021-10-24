@@ -73,12 +73,13 @@ const swiper = new Swiper(".swiper", {
 const productListt = document.querySelector(".product__name-list")
 productListt.addEventListener("click", function (event) {
    const el = event.target.id
+   console.log(el)
    const productList = new ProductList(el,{
    soup: [
-      {value: 'SOUP. . . .', price: 55.68, valueSub: 'INTEGER ULLAMCORPER NEQUE EU PURUSEUISMOD'},
-      { value: 'SOUP Rice. . . .', price: 50, valueSub: 'INTEGER ULLAMCORPER NEQUE' }],
+      {value: 'SOUP', price: 55.68, valueSub: 'INTEGER ULLAMCORPER NEQUE EU PURUSEUISMOD'},
+      { value: 'SOUP Rice', price: 50, valueSub: 'INTEGER ULLAMCORPER NEQUE' }],
    pizza: [
-      { value: 'Pineapple pizza. . . .', price: 120, valueSub: 'Chicken, mozzarella, cheddar and parmesan cheese, cheese sauce, tomatoes, alfredo sauce, garlic' }]
+      { value: 'Pineapple pizza', price: 120, valueSub: 'Chicken, mozzarella, cheddar and parmesan cheese, cheese sauce, tomatoes, alfredo sauce, garlic' }]
 })})
 
 
