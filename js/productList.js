@@ -18,7 +18,7 @@ class ProductList {
             this.Render(items)
             break
          }
-         else if (el == ""){
+         else if (el === ""){
             
          }
          else if (!(el === this.$menuEl)){
@@ -48,9 +48,9 @@ class ProductList {
 
    Search(value, price, valueSub) {
       const data =
-         `<li class="product__price-item" data-id="product1">
+         `<li class="product__price-item">
    <div class="card-product__box">
-      <div class="card-product__name"><div class="dom">
+      <div class="card-product__name"><div class="card-product__name-up">
       <p>${value}</p>
       <span class = "card-product__dotted"></span>
       </div><span>${valueSub}</span></div>

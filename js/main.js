@@ -73,14 +73,41 @@ const swiper = new Swiper(".swiper", {
 const productListt = document.querySelector(".product__name-list")
 productListt.addEventListener("click", function (event) {
    const el = event.target.id
-   console.log(el)
-   const productList = new ProductList(el,{
-   soup: [
-      {value: 'SOUP', price: 55.68, valueSub: 'INTEGER ULLAMCORPER NEQUE EU PURUSEUISMOD'},
-      { value: 'SOUP Rice', price: 50, valueSub: 'INTEGER ULLAMCORPER NEQUE' }],
-   pizza: [
-      { value: 'Pineapple pizza', price: 120, valueSub: 'Chicken, mozzarella, cheddar and parmesan cheese, cheese sauce, tomatoes, alfredo sauce, garlic' }]
-})})
+   if (!(event.target === event.currentTarget)) {
+      new ProductList(el, {
+         soup: [
+            { value: 'SOUP', price: 55.68, valueSub: 'INTEGER ULLAMCORPER NEQUE EU PURUSEUISMOD' },
+            { value: 'SOUP Rice', price: 50, valueSub: 'INTEGER ULLAMCORPER NEQUE' }],
+         pizza: [
+            { value: 'Pineapple pizza', price: 120, valueSub: 'Chicken, mozzarella, cheddar and parmesan cheese, cheese sauce, tomatoes, alfredo sauce, garlic' }]
+      })
+   }
+})
+
+// GALLERY================ 
+const test = document.querySelector(".gallery__list")
+test.addEventListener('click', function (event) {
+})
+
+new Gallery(".gallery__list", [
+   {
+      id: "photo-inside1",
+      src: "images/photo-inside1.jpg"
+   },
+   {
+      id: "photo-inside2",
+      src: "images/photo-inside2.jpg"
+   }, 
+   {
+      id: "photo-inside3",
+      src: "images/photo-inside3.jpg"
+   },
+   {
+      id: "photo-inside4",
+      src: "images/photo-inside4.jpg"
+   },
+
+])
 
 
 

@@ -311,6 +311,8 @@ body.lock {
 // НЕ ЗАБУДЬ ЧТО ШРИФТ ПО УМОЛЧАНИЮ 0 В PAGE
 
 .general {
+   position: relative;
+   color: #fff;
    padding: 100px 0;
    @media (max-width: 1000px) {
       padding: 30px 0;
@@ -330,6 +332,24 @@ body.lock {
    }
 }
 
+.screen {
+   &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+   }
+}
+.filter-bg {
+   background: rgba(0, 0, 0, 0.2);
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+}
 // ABOUT US ==================================
 
 .about,
@@ -398,10 +418,12 @@ body.lock {
    }
 }
 .about,
-.reservation {
+.reservation,
+.private {
    // .aboot__image
 
    &__image {
+      height: 100%;
       padding-left: 42px;
       @media (max-width: 1110px) {
          padding-right: 40px;
@@ -409,6 +431,7 @@ body.lock {
    }
 }
 .image {
+   height: 100%;
    width: 50%;
 
    @media (max-width: 600px) {
@@ -429,7 +452,7 @@ body.lock {
    // .image__photo
 
    &__photo {
-      height: 100%;
+      height: inherit;
       @media (max-width: 1110px) {
          width: 100%;
       }
@@ -456,45 +479,18 @@ body.lock {
 
 // CHEF===============================
 
-.chef {
-   position: relative;
-   color: #fff;
-   padding: 100px 0;
-   @media (max-width: 1000px) {
-      padding: 30px 0;
-   }
-   // .chef__inner
-
-   &__inner {
-   }
-
+.chef,
+.private-left {
    // .chef__image
-
    &__image {
       padding-right: 42px;
       @media (max-width: 1110px) {
          padding-left: 40px;
       }
    }
-
    // .chef__text
-
-   &__text {
-   }
 }
 
-.chef-screen {
-   // .chef-screen__bg
-
-   &__bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-   }
-}
 .image-left {
    display: block;
    margin-left: auto;
@@ -505,21 +501,16 @@ body.lock {
       left: -10%;
    }
 }
-.filter-bg {
-   background: rgba(0, 0, 0, 0.2);
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-}
+
 // RESERVATION===========================
 
 .reservation {
-   &__inner-form {
+
+   &__image {
+      @media (max-width: 600px) {
+      display: none;
    }
-}
-.title {
+   }
 }
 .form {
    &__inputs {
@@ -671,6 +662,10 @@ $height: 46px;
 
    &__name-item {
       padding: 22px 43px;
+      cursor: pointer;
+      @media (max-width: 1000px) {
+         padding: 22px 18px;
+      }
    }
 
    // .product__price-box
@@ -684,11 +679,15 @@ $height: 46px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      margin: 0 -10px;
    }
 
    // .product__price-item
 
    &__price-item {
+      margin: 0 10px;
+      width: 363px;
+      height: 66px;
    }
 }
 .product__name-item + .product__name-item {
@@ -712,7 +711,14 @@ $height: 46px;
    // .card-product__name
 
    &__name {
-      width: 259px;
+      flex: 1 0 65%;
+   }
+
+   &__name-up {
+      display: flex;
+   }
+   &__name-up p {
+      display: inline-block;
    }
    &__name span {
       display: block;
@@ -723,22 +729,150 @@ $height: 46px;
       color: rgba(51, 51, 51, 0.3);
    }
 
+   &__dotted {
+      flex: 1 0 1%;
+      display: block;
+      border-bottom: 2px dotted #000;
+   }
+
    // .card-product__price
 
    &__price {
    }
 }
-.dom{
-   display: flex
+
+// PRIVATE-EVENTS=====================
+
+.private {
+   &__title {
+      position: absolute;
+      top: 7%;
+      left: 50%;
+      font-family: "OpenSans";
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+      @media (max-width: 600px) {
+         position: static;
+         top: 0;
+         left: 0;
+         transform: translateX(0);
+         text-align: center;
+          margin-bottom: 20px;
+      }
+   }
 }
-.dom p{
- display: inline-block;
+.private-events {
+   @media (max-width: 1000px) {
+      padding: 65px 0;
+   }
+   @media (max-width: 600px) {
+      padding: 30px 0;
+   }
 }
-.card-product__dotted{
-   flex: 1 0 1%;
-   display: block;
-   border-bottom: 2px dotted #000;
+.private-left__image {
+   @media (max-width: 600px) {
+      margin-top: 20px;
+   }
 }
+.image {
+   &__photo-text-in {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 80px;
+      font-size: 24px;
+      line-height: 12px;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      @media (max-width: 800px) {
+         width: 65px;
+         font-size: 18px;
+         line-height: 10px;
+      }
+      @media (max-width: 400px) {
+         width: 50px;
+         font-size: 13px;
+         line-height: 8px;
+      }
+   }
+   &__photo-text-in p {
+      font-family: "Banny";
+      font-weight: 600;
+      writing-mode: vertical-lr;
+      padding-top: 10px;
+      text-transform: uppercase;
+   }
+}
+.left-photo-text-in {
+   left: 0;
+}
+.left-photo-text-in p {
+   transform: rotate(180deg);
+   padding-top: 15px;
+}
+// GALLERY============================
+
+.gallery {
+
+   &__show{
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      
+   }
+
+   &__show.active{
+      display: block;
+   }
+
+   &__show img{
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+   }
+		// .gallery__list
+
+		&__list {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         @media (max-width: 767px) {
+            flex-wrap: wrap;
+         }
+		}
+
+		// .gallery__item
+
+		&__item {
+         flex: 0 0 25%;
+         cursor: pointer;
+         @media (max-width: 767px) {
+            flex: 0 0 50%;
+         }
+		}
+
+		// .gallery__item-img
+
+		&__item-img {
+         width: 100%
+		}
+}
+
+.gallery__show.active{
+      display: block;
+   }
+
+
 
 // FOOTER=============================
 @import "footer.scss";
