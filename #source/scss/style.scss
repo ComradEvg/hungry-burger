@@ -354,7 +354,8 @@ body.lock {
 
 .about,
 .reservation,
-.product {
+.product,
+.contact {
    color: #000;
    // .about__inner
 }
@@ -505,11 +506,10 @@ body.lock {
 // RESERVATION===========================
 
 .reservation {
-
    &__image {
       @media (max-width: 600px) {
-      display: none;
-   }
+         display: none;
+      }
    }
 }
 .form {
@@ -761,7 +761,7 @@ $height: 46px;
          left: 0;
          transform: translateX(0);
          text-align: center;
-          margin-bottom: 20px;
+         margin-bottom: 20px;
       }
    }
 }
@@ -819,8 +819,7 @@ $height: 46px;
 // GALLERY============================
 
 .gallery {
-
-   &__show{
+   &__show {
       display: none;
       position: fixed;
       top: 50%;
@@ -828,51 +827,110 @@ $height: 46px;
       transform: translate(-50%, -50%);
       width: 80%;
       height: 80%;
-      
    }
 
-   &__show.active{
+   &__show.active {
       display: block;
    }
 
-   &__show img{
+   &__show img {
       object-fit: contain;
       width: 100%;
       height: 100%;
    }
-		// .gallery__list
 
-		&__list {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         @media (max-width: 767px) {
-            flex-wrap: wrap;
-         }
-		}
+   &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+   }
+   // .gallery__list
 
-		// .gallery__item
-
-		&__item {
-         flex: 0 0 25%;
-         cursor: pointer;
-         @media (max-width: 767px) {
-            flex: 0 0 50%;
-         }
-		}
-
-		// .gallery__item-img
-
-		&__item-img {
-         width: 100%
-		}
-}
-
-.gallery__show.active{
-      display: block;
+   &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 767px) {
+         flex-wrap: wrap;
+      }
    }
 
+   // .gallery__item
 
+   &__item {
+      flex: 0 0 25%;
+      cursor: pointer;
+      @media (max-width: 767px) {
+         flex: 0 0 50%;
+      }
+   }
+
+   // .gallery__item-img
+
+   &__item-img {
+      width: 100%;
+   }
+}
+
+.gallery__show.active {
+   display: block;
+}
+
+// CONTACT============================
+
+.form {
+   // .form__inputs
+
+   &__inputs {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   // .form__item
+
+   &__item {
+      flex: 1 1 30%;
+   }
+   &__textarea {
+      flex: 0 0 100%;
+   }
+
+   &__textarea textarea {
+      width: 100%;
+   }
+   // .form__input
+
+   &__input {
+      width: 100%;
+   }
+
+   // .form__bottom
+
+   &__bottom {
+      display: flex;
+   }
+
+   // .form__contacts
+
+   &__contacts {
+      display: flex;
+      width: 50%;
+      font-size: 12px;
+      line-height: 12px;
+      align-items: center;
+   }
+
+   // .form__link
+
+   &__link {
+   }
+
+   // .form__button
+}
+.contact-btn {
+   width: 50%;
+}
 
 // FOOTER=============================
 @import "footer.scss";

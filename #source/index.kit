@@ -143,7 +143,7 @@
 								</form>
 							</div>
 							<div class="reservation__image image">
-								<div class="image__photo-inner" >
+								<div class="image__photo-inner">
 									<img src="images/form-img.jpg" alt="about-img" class="image__photo">
 									<div class="image__decorate"></div>
 								</div>
@@ -240,27 +240,27 @@
 				<section class="product general">
 					<div class="container">
 						<div class="product__inner">
-								<div class="title">about us</div>
-								<div class="subtitle">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
-									a, tempor magna.
-								</div>
-								<div class="product__name-box">
-									<ul class="product__name-list">
-										<li class="product__name-item" id="soup">SOUPE</li>
-										<li class="product__name-item" id="pizza">PIZZA</li>
-										<li class="product__name-item" id="pasta">PASTA</li>
-										<li class="product__name-item" id="desert">DESERT</li>
-										<li class="product__name-item" id="wine">WINE</li>
-										<li class="product__name-item" id="beer">BEER</li>
-										<li class="product__name-item" id="drinks">DRINKS</li>	
-									</ul>
-								</div>
-								<div class="product__price-box">
-									<ul class="product__price-list">
-										<li>Enter category</li>
-									</ul>
-								</div>
+							<div class="title">about us</div>
+							<div class="subtitle">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
+								a, tempor magna.
+							</div>
+							<div class="product__name-box">
+								<ul class="product__name-list">
+									<li class="product__name-item" id="soup">SOUPE</li>
+									<li class="product__name-item" id="pizza">PIZZA</li>
+									<li class="product__name-item" id="pasta">PASTA</li>
+									<li class="product__name-item" id="desert">DESERT</li>
+									<li class="product__name-item" id="wine">WINE</li>
+									<li class="product__name-item" id="beer">BEER</li>
+									<li class="product__name-item" id="drinks">DRINKS</li>
+								</ul>
+							</div>
+							<div class="product__price-box">
+								<ul class="product__price-list">
+									<li>Enter category</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -273,7 +273,9 @@
 							<h3 class="private__title">private events</h3>
 							<div class="private-left__image image" id="leftImage" data-size="600">
 								<div class="image__photo-inner">
-									<div class="image__photo-text-in"><p>weddings</p></div>
+									<div class="image__photo-text-in">
+										<p>weddings</p>
+									</div>
 									<img src="images/weddings.jpg" alt="weddings" class="image__photo image-left">
 									<div class="image__decorate decorate-left"></div>
 								</div>
@@ -290,15 +292,59 @@
 						</div>
 					</div>
 				</section>
-				<section class="gallery">
-					<div class="gallery__show">
+				<section class="gallery" id="gallery">
+					<div class="gallery__show" id="galleryShow">
+						<div class="gallery__close">Закрыть</div>
+
 					</div>
 					<ul class="gallery__list">
-						<li class="gallery__item"><img src="images/photo-inside1.jpg" id="photo-inside1" alt="photo-inside1" class="gallery__item-img"></li>
-						<li class="gallery__item"><img src="images/photo-inside2.jpg" id="photo-inside2" alt="photo-inside2" class="gallery__item-img"></li>
-						<li class="gallery__item"><img src="images/photo-inside3.jpg" id="photo-inside3" alt="photo-inside3" class="gallery__item-img"></li>
-						<li class="gallery__item"><img src="images/photo-inside4.jpg" id="photo-inside4" alt="photo-inside4" class="gallery__item-img"></li>
+						<li class="gallery__item"><img src="images/photo-inside1.jpg" id="photo-inside1" alt="photo-inside1"
+								class="gallery__item-img"></li>
+						<li class="gallery__item"><img src="images/photo-inside2.jpg" id="photo-inside2" alt="photo-inside2"
+								class="gallery__item-img"></li>
+						<li class="gallery__item"><img src="images/photo-inside3.jpg" id="photo-inside3" alt="photo-inside3"
+								class="gallery__item-img"></li>
+						<li class="gallery__item"><img src="images/photo-inside4.jpg" id="photo-inside4" alt="photo-inside4"
+								class="gallery__item-img"></li>
 					</ul>
+				</section>
+				<section class="contact general">
+					<div class="container">
+						<div class="contact__inner">
+							<div class="title">contact</div>
+							<div class="subtitle">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a,
+								tempor magna.
+							</div>
+							<form class="form" action="#">
+								<div class="form__inputs">
+									<div class="form__item">
+										<input id="formName" type="text" name="name" class="form__input" autocomplete="off"
+											placeholder="Name">
+									</div>
+									<div class="form__item">
+										<input id="formEmail" type="email" name="email" class="form__input" autocomplete="off"
+											placeholder="Email">
+									</div>
+									<div class="form__item">
+										<input id="formPhone" type="tel" name="phone" class="form__input" autocomplete="off"
+											placeholder="Phone">
+									</div>
+									<div class="form__item form__textarea">
+										<textarea name="message" id="formMessage" class="form__input" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="form__bottom">
+									<div class="form__contacts">
+										<address class="form__link">5th London Boulevard, U.K.</address>
+										<a class="form__link" href="tel: +40 729 131 637" >+40 729 131 637/+40 726 458 782</a>
+										<a class="form__link" href="mailto: office@mindblister.com">office@mindblister.com</a>
+									</div>
+									<button type="submit" class="form__button contact-btn">book now</button>
+								</div>
+							</form>
+						</div>
+					</div>
 				</section>
 			</div>
 			<!-- @import "footer.html" -->
@@ -313,4 +359,5 @@
 	<script src="js/menu.js"></script>
 	<script src="js/setPeace.js"></script>
 </body>
+
 </html>

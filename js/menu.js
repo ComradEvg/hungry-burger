@@ -25,10 +25,10 @@ document.addEventListener('click', function (e) {
    else {
       nav.addEventListener('touchstart', function (e) {
          TouchStart(e);
-      });
+      }, {passive: true});
       nav.addEventListener('touchmove', function (e) {
          TouchMove(e);
-      });
+      }, {passive: true});
    }
 });
 let mousestart;
@@ -38,9 +38,7 @@ function TouchStart(e) {
    mousestart = e.targetTouches[0].clientX;
 };
 function TouchMove(e) {
-   e.preventDefault();
    mousemove = e.targetTouches[0].clientX;
-   console.log(mousemove);
    if (mousestart + 100 < mousemove) {
       nav.classList.remove("active");
       burger.classList.remove("active");
