@@ -19,11 +19,19 @@
 					d="M6.33594 8.28906C6.6875 8.64062 7.27344 8.64062 7.625 8.28906L12.9375 2.97656C13.3281 2.58594 13.3281 2 12.9375 1.64844L12.0781 0.75C11.6875 0.398438 11.1016 0.398438 10.75 0.75L6.96094 4.53906L3.21094 0.75C2.85938 0.398438 2.27344 0.398438 1.88281 0.75L1.02344 1.64844C0.632812 2 0.632812 2.58594 1.02344 2.97656L6.33594 8.28906Z" />
 			</g>
 		</symbol>
+		<symbol width="100%" height="100%" viewBox="0 0 91 91" id="marker">
+			<g>
+				<path
+					d="M66.9,41.8c0-11.3-9.1-20.4-20.4-20.4c-11.3,0-20.4,9.1-20.4,20.4c0,11.3,20.4,32.4,20.4,32.4S66.9,53.1,66.9,41.8z    M37,41.4c0-5.2,4.3-9.5,9.5-9.5c5.2,0,9.5,4.2,9.5,9.5c0,5.2-4.2,9.5-9.5,9.5C41.3,50.9,37,46.6,37,41.4z"/>
+			</g>
+		</symbol>
 	</svg>
 	<div class="wrapper">
 		<main class="page">
 <header class="header">
-   <div class="burger"><span></span></div>
+   <div class="burger">
+      <span></span>
+   </div>
    <div class="container">
       <div class="header__inner">
          <nav class="menu">
@@ -356,16 +364,16 @@
 								tempor magna.
 							</div>
 							<form class="form" action="#">
-								<div class="form__inputs">
-									<div class="form__item">
+								<div class="form__inputs form__inputs-contact">
+									<div class="form__item form__item-contact">
 										<input id="formName" type="text" name="name" class="form__input" autocomplete="off"
 											placeholder="Name">
 									</div>
-									<div class="form__item">
+									<div class="form__item form__item-contact">
 										<input id="formEmail" type="email" name="email" class="form__input" autocomplete="off"
 											placeholder="Email">
 									</div>
-									<div class="form__item">
+									<div class="form__item form__item-contact">
 										<input id="formPhone" type="tel" name="phone" class="form__input" autocomplete="off"
 											placeholder="Phone">
 									</div>
@@ -375,9 +383,35 @@
 								</div>
 								<div class="form__bottom">
 									<div class="form__contacts">
-										<address class="form__link">5th London Boulevard, U.K.</address>
-										<a class="form__link" href="tel: +40 729 131 637" >+40 729 131 637/+40 726 458 782</a>
-										<a class="form__link" href="mailto: office@mindblister.com">office@mindblister.com</a>
+										<div class="form__link">
+											<svg class="marker" viewBox="15 15 65 65">
+													<g>
+														<path
+															d="M66.9,41.8c0-11.3-9.1-20.4-20.4-20.4c-11.3,0-20.4,9.1-20.4,20.4c0,11.3,20.4,32.4,20.4,32.4S66.9,53.1,66.9,41.8z    M37,41.4c0-5.2,4.3-9.5,9.5-9.5c5.2,0,9.5,4.2,9.5,9.5c0,5.2-4.2,9.5-9.5,9.5C41.3,50.9,37,46.6,37,41.4z" />
+													</g>
+											</svg>
+											<address class="address">5th London Boulevard, U.K.</address></div>
+										<div class="form__link">
+											<svg class="phone" viewBox="0 0 477.156 477.156">
+											<g>
+												<path d="M475.009,380.316l-2.375-7.156c-5.625-16.719-24.062-34.156-41-38.75l-62.688-17.125c-17-4.625-41.25,1.594-53.688,14.031
+														l-22.688,22.688c-82.453-22.28-147.109-86.938-169.359-169.375L145.9,161.94c12.438-12.438,18.656-36.656,14.031-53.656
+														l-17.094-62.719c-4.625-16.969-22.094-35.406-38.781-40.969L96.9,2.19c-16.719-5.563-40.563,0.063-53,12.5L9.962,48.659
+														C3.899,54.69,0.024,71.94,0.024,72.003c-1.187,107.75,41.063,211.562,117.281,287.781
+														c76.031,76.031,179.454,118.219,286.891,117.313c0.562,0,18.312-3.813,24.375-9.845l33.938-33.938
+														C474.946,420.878,480.571,397.035,475.009,380.316z" />
+											</g>
+											</svg>
+											<a class="mobile" href="tel: +40 729 131 637" >+40 729 131 637/+40 726 458 782</a></div>
+										<div class="form__link">
+											<svg class="marker" viewBox="0 0 65 65">
+												<g>
+													<path
+													d="M63.125,9.977c-0.902-1.321-2.419-2.194-4.131-2.194H5.006c-1.676,0-3.158,0.842-4.067,2.117l31.16,25.982L63.125,9.977z" />
+													<path d="M0.006,14.328v36.889c0,2.75,2.25,5,5,5h53.988c2.75,0,5-2.25,5-5V14.461L32.099,41.09L0.006,14.328z" />
+												</g>
+											</svg>
+											<a class="mail" href="mailto: office@mindblister.com">office@mindblister.com</a></div>
 									</div>
 									<button type="submit" class="form__button contact-btn">book now</button>
 								</div>

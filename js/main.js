@@ -4,9 +4,9 @@ const windowInnerWidth = window.innerWidth
 function ibgmy() {
    const ibgs = document.getElementsByClassName('ibg');
    for (let ibg of ibgs) {
-      const img = ibg.querySelector("img");
+      const img = ibg.children[0];
       const imgsrc = img.getAttribute("src");
-      ibg.style.backgroundImage = 'url("' + imgsrc + '")';
+      ibg.style.backgroundImage = `url("${imgsrc}")`;
    }
 }
 ibgmy();
@@ -25,12 +25,15 @@ window.addEventListener('scroll', function () {
    }
 });
 
-let phone = document.getElementById("formPhone");
+let phones = document.querySelectorAll("#formPhone");
 let im = new Inputmask({
    "mask": "+7 (999) 999-99-99",
    showMaskOnHover: false
 });
-im.mask(phone);
+phones.forEach(phone=>{
+   im.mask(phone);
+})
+
 
 
 let date = document.getElementById("formDate");
@@ -85,10 +88,6 @@ productListt.addEventListener("click", function (event) {
 })
 
 // GALLERY================ 
-const test = document.querySelector(".gallery__list")
-test.addEventListener('click', function (event) {
-})
-
 new Gallery(".gallery__list", [
    {
       id: "photo-inside1",

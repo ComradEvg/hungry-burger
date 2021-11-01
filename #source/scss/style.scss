@@ -882,22 +882,19 @@ $height: 46px;
 .form {
    // .form__inputs
 
-   &__inputs {
-      display: flex;
-      justify-content: space-between;
-   }
-
    // .form__item
 
-   &__item {
-      flex: 1 1 30%;
+   &__item-contact {
+      min-width: 280px;
+      flex: 1 0 30%;
    }
    &__textarea {
-      flex: 0 0 100%;
+      flex: 1 1 100%;
    }
 
    &__textarea textarea {
       width: 100%;
+      resize: none;
    }
    // .form__input
 
@@ -924,10 +921,29 @@ $height: 46px;
    // .form__link
 
    &__link {
+      position: relative;
+      padding-left: 20px;
+      opacity: .7;
    }
 
+   &__link svg{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 14px;
+   height: 14px;
+   fill: #e8c300;
+   }
    // .form__button
 }
+.form__link + .form__link {
+   margin-left: 15px;
+}
+.phone {
+   transform: rotate(-90deg);
+}
+
+
 .contact-btn {
    width: 50%;
 }

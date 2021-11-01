@@ -2128,26 +2128,20 @@ button.swiper-pagination-bullet {
   display: block;
 }
 
-.form__inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.form__item {
+.form__item-contact {
+  min-width: 280px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30%;
-          flex: 1 1 30%;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
 }
 .form__textarea {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 .form__textarea textarea {
   width: 100%;
+  resize: none;
 }
 .form__input {
   width: 100%;
@@ -2168,6 +2162,29 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center;
 }
+.form__link {
+  position: relative;
+  padding-left: 20px;
+  opacity: 0.7;
+}
+.form__link svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  fill: #e8c300;
+}
+
+.form__link + .form__link {
+  margin-left: 15px;
+}
+
+.phone {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .contact-btn {
   width: 50%;
 }

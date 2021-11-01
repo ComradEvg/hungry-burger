@@ -32,8 +32,8 @@
       top: 10px;
    }
    &::before,
-   &::after {
-      content: "";
+   &::after{
+       content: "";
       display: block;
       position: absolute;
       width: 100%;
