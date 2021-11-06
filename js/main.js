@@ -1,5 +1,9 @@
 
-const windowInnerWidth = window.innerWidth
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".menu");
+const menuIcon = document.querySelector('.menu-icon__img')
+const headerBG = document.querySelector('.header')
+
 
 function ibgmy() {
    const ibgs = document.getElementsByClassName('ibg');
@@ -11,11 +15,20 @@ function ibgmy() {
 }
 ibgmy();
 
-const menuIcon = document.querySelector('.menu-icon__img')
-const headerBG = document.querySelector('.header')
+function startNavigation(){
+const styleDisplayBurger = getComputedStyle(burger).display
+if(styleDisplayBurger === "block"){
+   new BurgerNavigation (burger, nav);
+}
+else{
+   nav.addEventListener("click", BurgerNavigation.ScrollNav)
+}
+}
+startNavigation();
+
 
 window.addEventListener('scroll', function () {
-   if (50 < window.pageYOffset && window.innerWidth >= 767) {
+   if (50 < window.pageYOffset && window.innerWidth >= 769 && window.innerHeight >= 769) {
       menuIcon.classList.add("deactive")
       headerBG.classList.add("active")
    }
@@ -33,8 +46,6 @@ let im = new Inputmask({
 phones.forEach(phone=>{
    im.mask(phone);
 })
-
-
 
 let date = document.getElementById("formDate");
 let dateMask = new Inputmask({

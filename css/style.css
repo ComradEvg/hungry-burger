@@ -140,7 +140,7 @@ body {
   color: #fff;
 }
 
-.main .arrow__bg, .main .arrow, .main__filter {
+.footer__row, .main .arrow__bg, .main .arrow, .main__filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,6 +319,9 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+}
+.menu__link {
+  text-transform: uppercase;
 }
 @media (orientation: portrait) and (max-width: 768px) {
   .menu {
@@ -989,7 +992,6 @@ body {
   display: block;
 }
 .select__input {
-  height: 46px;
   background-color: #e5e5e5;
   padding: 16px 22px;
   display: -webkit-box;
@@ -2271,4 +2273,14 @@ button.swiper-pagination-bullet {
     min-width: 320px;
     width: 100%;
   }
+}
+
+.footer {
+  background-color: #000;
+}
+.footer__row {
+  font-size: 12px;
+  line-height: 12px;
+  height: 100px;
+  opacity: 0.5;
 }

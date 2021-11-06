@@ -1,0 +1,13 @@
+.footer {
+   background-color: #000;
+
+   // .footer__row
+
+   &__row {
+      font-size: 12px;
+      line-height: 12px;
+      @extend %flex-cen;
+      height: 100px;
+      opacity: .5;
+   }
+}

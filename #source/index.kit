@@ -29,7 +29,7 @@
 	<div class="wrapper">
 		<main class="page">
 			<!-- @import "header.html" -->
-			<div class="main-screen main">
+			<div class="main-screen main" data-section="home">
 				<div class="main-screen__bg ibg"><img src="images/header-bg.jpg" alt="header-bg"></div>
 				<div class="main__filter">
 					<div class="main__inner">
@@ -63,7 +63,7 @@
 				</div>
 			</div>
 			<div class="content">
-				<section class="about general">
+				<section class="about general" data-section="about">
 					<div class="container">
 						<div class="about__inner general__inner">
 							<div class="about__text text-inner">
@@ -86,7 +86,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="chef general">
+				<section class="chef general" data-section="team">
 					<div class="screen__bg ibg"><img src="images/specialty-bg.jpg" alt="specialty-bg">
 						<div class="filter-bg"></div>
 					</div>
@@ -113,7 +113,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="reservation general">
+				<section class="reservation general" data-section="booking">
 					<div class="container">
 						<div class="reservation__inner general__inner">
 							<div class="reservation__inner text-inner">
@@ -243,10 +243,10 @@
 						</div>
 					</div>
 				</section>
-				<section class="product general">
+				<section class="product general" data-section="menu">
 					<div class="container">
 						<div class="product__inner">
-							<div class="title">about us</div>
+							<div class="title">DELICIOUS MENU</div>
 							<div class="subtitle">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
 								a, tempor magna.
@@ -270,7 +270,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="private-events general">
+				<section class="private-events general" data-section="events">
 					<div class="screen__bg ibg"><img src="images/private-bg.jpg" alt="private-bg">
 						<div class="filter-bg"></div>
 					</div>
@@ -298,7 +298,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="gallery" id="gallery">
+				<section class="gallery" id="gallery" data-section="galerie">
 					<div class="gallery__show" id="galleryShow">
 						<div class="gallery__close">Закрыть</div>
 
@@ -314,7 +314,7 @@
 								class="gallery__item-img"></li>
 					</ul>
 				</section>
-				<section class="contact general">
+				<section class="contact general" data-section="contact">
 					<div class="container">
 						<div class="contact__inner">
 							<div class="title">contact</div>
@@ -378,6 +378,10 @@
 						</div>
 					</div>
 				</section>
+				<section class="map">
+					<script type="text/javascript" charset="utf-8" async
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adc11f9c15405d6a14f56bf2a7137669acd4bc0ff26123d0b21c7d0d277b91b1f&amp;width=100%&amp;height=475&amp;lang=ru_RU&amp;scroll=false"></script>
+				</section>
 			</div>
 			<!-- @import "footer.html" -->
 		</main>
@@ -387,9 +391,10 @@
 	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/productList.js"></script>
 	<script src="js/gallery.js"></script>
-	<script src="js/main.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/setPeace.js"></script>
+	<script src="js/main.js"></script>
+	
 </body>
 
 </html>
